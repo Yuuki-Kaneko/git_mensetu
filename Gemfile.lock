@@ -205,7 +205,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap (>= 1.1.0)
+  bootsnap
   byebug
   capybara (>= 2.15)
   chromedriver-helper
