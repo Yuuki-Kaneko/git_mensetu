@@ -1,0 +1,26 @@
+body {
+    height: 5000px;
+}
+.num {
+    margin: 0;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+.box {
+    height: 800px;
+    margin: 0;
+    padding: 0;
+}
+#box1 {
+    background: url("box1.jpg") no-repeat;
+}
+#box2 {
+    background: url("box2.jpg") no-repeat;
+}
+#box3 {
+    background: url("box3.jpg") no-repeat;
+}
+#box4 {
+    background: url("box4.jpg") no-repeat;
+}
