@@ -1,26 +1,143 @@
+html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html, body {
+	line-height: 1;
+	min-height:100%;
+	font-family:Artial, Verdana, sans-serif;
+}
+
 body {
-    height: 5000px;
+	background: #eeeeee;
+	background: -webkit-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: -moz-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: -o-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: -ms-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: linear-gradient(top, #eeeeee, #cccccc 100%);
+	background-attachment:fixed;
 }
-.num {
-    margin: 0;
-    position: fixed;
-    right: 10px;
-    top: 10px;
+
+ol, ul {
+	list-style: none;
 }
-.box {
-    height: 800px;
-    margin: 0;
-    padding: 0;
+
+p {
+	margin:1em 0;
+	line-height:1.1em;
 }
-#box1 {
-    background: url("box1.jpg") no-repeat;
+
+q {
+	font-style:italic;
+	color:#333;
 }
-#box2 {
-    background: url("box2.jpg") no-repeat;
+
+h1 {
+	font-size:2.91em;
+	margin:0;
 }
-#box3 {
-    background: url("box3.jpg") no-repeat;
+
+h1 > small {
+	text-align:right;
+	display:inline-block;
+	font-size:.71em;
+	text-indent:15em;
+	color:#444;
 }
-#box4 {
-    background: url("box4.jpg") no-repeat;
+
+h2 {
+	color:inherit;
+	font-size:1.91em;
+	margin:2em 0 1em 0;
+}
+
+h2:first-child {margin-top:0;}
+
+h3 {
+	color:#333;
+	font-size:1.41em;
+	margin:1em 0;
+}
+
+h4 {
+	color:#444;
+	font-size:1.11em;
+	margin:1em 0;
+}
+
+#bg1, #bg2, #bg3 {
+	z-index:50;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(bubbles.png) repeat 0 0;
+}
+
+#bg2 {
+	z-index:49;
+	background-image:url(bubbles2.png);
+}
+
+#bg3 {
+	z-index:48;
+	background-image:url(bubbles3.png);
+}
+
+#intro {
+	width:80%;
+	left:50%;
+	top:1em;
+	margin-left:-40%;
+	padding:2;
+	background:#fff;
+	text-align:center;
+	border-radius:1em;
+
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	transform-origin:0 0;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#intro .triangle {
+	font-size:2em;
+	color:#f8a404;
+}
+
+#transform {
+	width:70%;
+	left:50%;
+	top:20%;
+	margin-left:-35%;
+	text-align:center;
+	font-size:150%;
+
+	.transform-origin(50%, 50%);
+}
+
+#e_wrapper {
+	width:100%;
+	height:100%;
+}
+
+#easing {
+	top:10%;
+	width:50%;
+	z-index:101;
 }
