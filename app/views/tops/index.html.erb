@@ -1,45 +1,59 @@
-	<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
-	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
-	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
-    <!--【デモ１】-->
-    <div id="intro"
-        data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;"
-        data-500="opacity:0;top:-10%;transform:rotate(-90deg);"
-        class="skrollable skrollable-between"
-        style="opacity: 1; top: 3%; transform: rotate(0deg); transform-origin: 0px 0px;">
-        <h1>★skrollrデモ★</h1>
-        <h2>【デモ１】スクロールすると透明になりながら、上へ移動し、左へ回転します</h2>
-        <p>デモは他にもあります。どんどん下へスクロールしてお楽しみください！</p>
-        <p class="triangle">▼&nbsp;▼&nbsp;▼</p>
-    </div>
+<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
+    
+<header>
+    <h1>Mensetu</h1>
+    <a href="https://www.olija.jp/">Let's go olija!!</a>
+</header>
 
-    <!--【デモ２】-->
-    <div id="transform"
-        data-500="transform:scale(0) rotate(0deg);"
-        data-1000="transform:scale(1) rotate(1440deg);opacity:1;"
-        data-1300=""
-        data-1600="transform:scale(5) rotate(3240deg);opacity:0;"
-        class="skrollable skrollable-before"
-        style="transform:scale(0) rotate(0deg);opacity: 1;">
-        <h2>【デモ２】transform</h2>
+  <!--【デモ１】-->
+  <div id="intro"
+       data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;"
+       data-500="opacity:0;top:-10%;transform:rotate(-90deg);"
+       class="skrollable skrollable-between"
+       style="opacity: 1; top: 3%; transform: rotate(0deg); transform-origin: 0px 0px;">
+       <h1>【demo 1】</h1>
+       <h2>スクロールすると透明になりながら、上へ移動し、左へ回転します</h2>
+       <p>どんどん下へスクロールしてお楽しみください！</p>
+       <p class="triangle">▼&nbsp;▼&nbsp;▼</p>
+  </div>
+
+  <!--【デモ２】-->
+  <div id="transform"
+       data-500="transform:scale(0) rotate(0deg);"
+       data-1000="transform:scale(1) rotate(1440deg);opacity:1;"
+       data-1300=""
+       data-1600="transform:scale(5) rotate(3240deg);opacity:0;"
+       class="skrollable skrollable-before"
+       style="transform:scale(0) rotate(0deg);opacity: 1;">
+        <h2>【demo２】</h2>
         <p>①拡大・回転しながらフェードイン</p>
         <p>②しばらく静止</p>
         <p>③拡大・回転しながらフェードアウト</p>
-    </div>
+  </div>
 
-    <!--【デモ３】-->
-    <div id="e_wrapper"
-         data-0="display:none;"
-         data-1700="display:block;"
-         data-2700="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);"
-         data-3700="background:rgba(0,0,0,1);color:rgb(255,255,255);"
-         class="skrollable skrollable-between"
-         style="display: none; top: 0%; background: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);">
-    <div id="easing" data-1700="left:100%" data-4600="left:35%" class="skrollable skrollable-before" style="left: 100%;">
-        <h2>【デモ３】スライドイン</h2>
+  <!--【デモ３】-->
+  <div id="e_wrapper"
+       data-0="display:none;"
+       data-1700="display:block;"
+       data-2700="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);"
+       data-3700="background:rgba(0,0,0,1);color:rgb(255,255,255);" 
+       class="skrollable skrollable-between"
+       style="display: none; top: 0%; background: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);">
+    <div id="easing" data-1700="left:100%" data-4600="left:25%" class="skrollable skrollable-before" style="left: 100%;">
+        <h2>【demo ３】スライドイン</h2>
         <p>さらにスクロールすると・・・</p>
         <p>背景の <span data-1700="" data-2700="color[swing]:rgb(0,0,0);" data-3700="color:rgb(255,255,0);" class="skrollable skrollable-before" style="color: rgb(0, 0, 0); font-size: 150%;">画面色 </span>が変わります。</p>
-        <p data-3700="opacity:0;font-size:100%;" data-4600="opacity:1;font-size:200%;" class="skrollable skrollable-before" style="opacity: 0; font-size: 100%;">楽しいでしょう？</p>
+        <p data-3700="opacity:0;font-size:100%;" data-4600="opacity:1;font-size:200%;" class="skrollable skrollable-before" style="opacity: 0; font-size: 100%;">終わりです！！</p>
+          <%= form_for(@tops) do |f| %>
+            <%= f.text_field :full_name, placeholder: "お名前" %>
+            <%= f.text_field :email, placeholder: "Email" %>
+            <%= f.submit "登録する" %>
+          <% end %>
+          <%= form_tag(action: :purchase, method: :post) do %>
+            <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="<%= ENV["PAYJP_PUBLIC_KEY"] %>"></script>
+          <% end %>
         </div>
     </div>
     
